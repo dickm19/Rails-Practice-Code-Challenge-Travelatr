@@ -1,0 +1,7 @@
+<h1>New Post</h1>
+<% if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+    <% end %>
+<% end %>
+<%= render "posts_form" %>

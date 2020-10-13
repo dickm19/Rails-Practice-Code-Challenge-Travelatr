@@ -1,0 +1,15 @@
+<h1><%=@post.title %></h1>
+
+<p><%= @post.content %></p>
+
+<h2>Blogger:</h2>
+<p> <%= link_to @post.blogger.name, blogger_path(@post.blogger) %></p>
+
+<h3> Destination: </h3>
+<p> <%= link_to @post.destination.name, destination_path(@post.destination) %></p>
+
+<%= button_to "like", like_path(@post), method: "put" %>
+
+<h4> Likes: </h4>
+<p><%= @post.likes.count %> </p>
+

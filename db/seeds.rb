@@ -32,3 +32,5 @@ end
     })
   end
 end
+
+20.times {Like.create(post: Post.all.sample, blogger: Blogger.all.sample)}
